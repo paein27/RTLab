@@ -1,32 +1,67 @@
 ---
 // src/layouts/DefaultLayout.astro
-// Este layout envuelve todas las páginas, incluyendo <head>, Navbar y Footer
+// Envuelve todas las páginas: <head>, Navbar y Footer.
+// Props:
+//   title       → título de la página (se antepone al nombre del grupo)
+//   description → meta description (por defecto la de site.json)
+//   fullWidth   → si es true, el contenido no se envuelve en un contenedor
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+import site from "../data/site.json";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  fullWidth?: boolean;
+}
+
+const { title, description = site.description, fullWidth = false } =
+  Astro.props;
+const pageTitle = title
+  ? `${title} · ${site.name} (${site.shortName})`
+  : `${site.name} (${site.shortName}) · ${site.institution.university}`;
 ---
 
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RatLab - Radio Transientes PUC</title>
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={site.logo.full} />
+    <link rel="icon" type="image/png" href={site.logo.favicon} />
+    <link rel="apple-touch-icon" href={site.logo.appleTouch} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="icon"
-      type="image/png"
-      href="/images/logo/ratLab-logo-removebg-preview.png"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
     />
-    <link
-      rel="apple-touch-icon"
-      href="/images/logo/ratLab-logo-removebg-preview.png"
-    />
-    <link rel="stylesheet" href="/styles/global.css" />
   </head>
   <body class="min-h-screen flex flex-col">
     <Navbar />
-    <main class="container mx-auto px-4 py-8 flex-grow">
-      <slot />
-      {/* Aquí va el contenido de cada página */}
-    </main>
-    <Footer />
+    {
+      fullWidth ? (
+        <main class="flex-grow">
+          <slot />
+        </main>
+      ) : (
+        <main class="flex-grow w-full max-w-7xl mx-auto px-4 py-10">
+          <slot />
+        </main>
+      )
+    }
+    {
+      Astro.slots.has("footer-cta") ? (
+        <Footer>
+          <slot name="footer-cta" />
+        </Footer>
+      ) : (
+        <Footer />
+      )
+    }
   </body>
 </html>

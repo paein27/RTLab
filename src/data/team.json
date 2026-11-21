@@ -1,158 +1,320 @@
 [
   {
-    "name": "Dr. Marilyn Cruces",
-    "currentRole": "Radioastronomer, Professor at UC Chile Max Planck Partner group leader",
-    "img": "/images/miembros/mcruces.jpg",
+    "name": "Marilyn Cruces",
+    "slug": "marilyn-cruces",
+    "group": "lead",
+    "position": "Assistant Professor (PUC) & Max Planck Partner Group Leader",
+    "education": "B.Sc. Astronomy (UdeC), M.Sc. Astrophysics (PUC), Ph.D. (University of Bonn)",
+    "area": "Group Leader",
+    "img": "/images/miembros/marilyn-cruces.jpg",
     "email": "mscruces@uc.cl",
-    "projectDescriptionEn": "Data scientist with track of handling big data and developing algorithms to automate processing and enable predictive modeling. Skilled in programing (python, C, Matlab, SQL), numerical simulations, statistical methods and project management/report.",
-    "projectDescriptionEs": "Científica de datos con experiencia en el manejo de big data y desarrollo de algoritmos para automatizar el procesamiento y habilitar el modelado predictivo. Hábil en programación (python, C, Matlab, SQL), simulaciones numéricas, métodos estadísticos y gestión de proyectos/informes.",
+    "bio": "I am a Chilean radio astronomer specializing in transient astrophysical phenomena (FRBs, pulsars, and magnetars) and resource-aware RF technologies for radio astronomy and satellite communications applications. I received my PhD from the University of Bonn through the IMPRS program at MPIfR, following a Master's in Astrophysics from UC Chile and a Bachelor's in Astronomy from UdeC. Before establishing my research group at the Astroengineering Center UC, I worked as a postdoctoral researcher at MPIfR and as an ESO–ALMA Fellow.",
+    "skills": ["Radio transient surveys", "Data science", "Signal processing", "RF design"],
+    "hobbies": "Powerlifting, interior design, traveling the world",
     "profiles": {
       "orcid": "https://orcid.org/0000-0001-6804-6513",
       "linkedin": "https://www.linkedin.com/in/prof-marilyn-c-351364122/"
-    }
+    },
+    "adsNames": ["Cruces, M."]
   },
   {
-    "name": "Cristóbal Braga",
-    "currentRole": "Bachelor's Degree in Astronomy at Universidad de Chile",
-    "img": "/images/miembros/cbraga.jpg",
-    "email": "cristobal.braga@ug.uchile.cl",
-    "projectDescriptionEn": "Bachelor's in Astronomy at Universidad de Chile specializing in radio astronomy and data science. Focused on Fast Radio Bursts (FRBs) simulation, targeted searches for repeating FRBs, and developing integrated data processing pipelines. Interested in applying machine learning techniques for FRB classification and prediction.",
-    "projectDescriptionEs": "Licenciatura en Astronomía en la Universidad de Chile especializado en radioastronomía y ciencia de datos. Enfocado en simulación de Fast Radio Bursts (FRBs), búsquedas dirigidas de FRBs repetitivos, y desarrollo de pipelines integrados de procesamiento de datos. Interesado en aplicar técnicas de machine learning para clasificación y predicción de FRBs.",
-    "profiles": {
-      "orcid": "https://orcid.org/0009-0000-6017-4211",
-      "linkedin": "https://www.linkedin.com/in/cristóbal-braga-viñals-938144305/?locale=es_ES"
-    }
+    "name": "Javier A. Mora Osses",
+    "slug": "javier-mora",
+    "group": "staff",
+    "position": "Radio Frequency Engineer",
+    "education": "Electrical Engineer, PUC",
+    "area": "Antenna Design & DSP Team Leader",
+    "img": "/images/miembros/javier-mora.jpg",
+    "bio": "I am an Electrical Engineer from Pontificia Universidad Católica de Chile, specializing in RF systems and the design and integration of complete RF chains. At the Astroengineering Center UC (AIUC), I lead the Antenna Design & Digital Signal Processing teams, coordinating the RF work behind FRONTIERS, from the antennas and front-ends to the signal chain that brings the data into the digital domain. My main work focuses on spectrum analysis from 500 MHz up to 18 GHz to identify and evaluate candidate sites for the FRONTIERS deployment. I also characterize antennas experimentally using SDRs. In parallel, I am developing heterodyne mixing techniques based on practical, low-cost RF technology that can be developed and produced locally in Chile.",
+    "skills": ["RF chain design & integration", "Antenna measurement", "SDR & signal processing", "Spectrum analysis", "Python & C++", "AI"],
+    "hobbies": "Cycling, swimming, cooking, taekwondo",
+    "profiles": {},
+    "adsNames": ["Mora Osses, J.", "Mora, J. A."]
   },
   {
-    "name": "Josefina Vera-Casanova",
-    "currentRole": "B.Sc. in Astronomy and M.Sc. student in Engineering at Pontificia Universidad Católica de Chile",
-    "img": "/images/miembros/jvera.jpg",
+    "name": "Ignacio Wang Cabrera",
+    "slug": "ignacio-wang",
+    "group": "staff",
+    "position": "Electronics Engineer",
+    "education": "Electrical Engineer, PUC",
+    "area": "Electronics & Astrophysics Team Leader",
+    "img": "/images/miembros/ignacio-wang.jpg",
+    "bio": "",
+    "profiles": {},
+    "adsNames": ["Wang Cabrera, I.", "Wang, I."],
+    "pending": true
+  },
+  {
+    "name": "Josefina Vera Casanova",
+    "slug": "josefina-vera",
+    "group": "staff",
+    "position": "Research Assistant",
+    "education": "B.Sc. Astronomy, M.Sc. Engineering (PUC)",
+    "area": "Antenna (RF) Design",
+    "img": "/images/miembros/josefina-vera.jpg",
     "email": "josefina.vera@alumni.uc.cl",
-    "projectDescriptionEn": "B.Sc. in Astronomy and M.Sc. student in Engineering at PUC. Research focuses on astronomical instrumentation for radioastronomy and radio transient sources like pulsars and magnetars as FRB progenitors. Experience includes NRAO REU Chile at ALMA and MPIfR visit. Active in science outreach and women in STEM advocacy through PROVOCA AUI/NRAO program.",
-    "projectDescriptionEs": "Licenciada en Astronomía y estudiante de Magíster en Ingeniería en la PUC. Su investigación se enfoca en instrumentación astronómica para radioastronomía y fuentes transitorias radio como púlsares y magnetares como progenitores de FRBs. Experiencia incluye NRAO REU Chile en ALMA y visita al MPIfR. Activa en divulgación científica y promoción de mujeres en STEM a través del programa PROVOCA AUI/NRAO.",
+    "bio": "I hold a B.Sc. in Astronomy and recently finished my M.Sc. in Astroengineering at UC Chile. My research interests span from radio transients such as pulsars, magnetars and Fast Radio Bursts (FRBs) to the development of astronomical instrumentation for radio astronomy. I am also passionate about science outreach and advocating for women in STEM. My first research project in the field of radio transients was the study of the Galactic Centre magnetar at millimetre wavelengths, using Phased ALMA. This work demonstrated the potential of ALMA in the time domain to study fast transients. Driven by my interest in state-of-the-art radio astronomy instrumentation, my second project was the development of an antenna feed at L-band (1–2 GHz) for FRONTIERS, including the design, simulations, assembly and testing.",
+    "skills": ["Radio transient searches", "Data analysis", "Antenna & RF design/testing", "Signal processing for radio astronomy"],
+    "hobbies": "Dancing, running, birdwatching, sleeping",
     "profiles": {
       "orcid": "https://orcid.org/0009-0002-6002-0575",
       "linkedin": "https://www.linkedin.com/in/josefina-vera-casanova-214ba0300/"
-    }
+    },
+    "adsNames": ["Vera-Casanova, J.", "Vera Casanova, J."]
   },
   {
-    "name": "Nicolás Bermedo",
-    "currentRole": "Computer Science Engineering Student",
-    "img": "/images/miembros/nbermedo.jpg",
-    "email": "nabermedo@uc.cl",
-    "projectDescriptionEn": "I research the development and optimization of deep learning-based pipelines for the automatic detection and classification of transient astronomical events, with a particular focus on Fast Radio Bursts (FRBs).",
-    "projectDescriptionEs": "Investigo el desarrollo y la optimización de pipelines basados en aprendizaje profundo para la detección y clasificación automática de eventos astronómicos transitorios, con un enfoque particular en Fast Radio Bursts (FRBs).",
-    "profiles": {
-      "orcid": "https://orcid.org/0009-0002-5164-9187",
-      "linkedin": ""
-    }
+    "name": "Benjamín Ruz",
+    "slug": "benjamin-ruz",
+    "group": "students",
+    "position": "PhD Student in Electrical Engineering",
+    "education": "B.Sc. Physics (PUC), PhD candidate in Electrical Engineering (PUC)",
+    "area": "Antenna (RF) Design & Digital Signal Processing",
+    "img": "/images/miembros/benjamin-ruz.jpg",
+    "bio": "I am an engineering PhD student working on RF systems for radio astronomy and satellite communications. I hold a Bachelor's in Physics from UC Chile, where I did research in experimental surface physics at SurfLab before joining RTL in 2026. At RTL, I work on extending FRONTIERS, our low-cost, large-N small-D radio telescope, into a dual-use instrument that can also operate as a satellite ground station. This includes developing an RFSoC-based transceiver for X-band satellite links, designing X-band feeds that share the dish with the L-band astronomy feed, and integrating the RF chain and tracking needed for satellite communication.",
+    "hobbies": "Playing guitar and football",
+    "profiles": {},
+    "adsNames": ["Ruz, B."]
   },
   {
-    "name": "Irma Pizarro",
-    "currentRole": "Bachelor student in Astrophysics with specialization in Data Science at Universidad de Santiago",
-    "img": "/images/miembros/ipizarro.jpg",
-    "email": "irma.pizarro@usach.cl",
-    "projectDescriptionEn": "I am Irma Pizarro, currently a bachelor student in Astrophysics with a specialization in Data Science at Universidad de Santiago. My research focuses on studying the polarization properties of magnetars near the Galactic Center in Bands 1 and 3 of ALMA.",
-    "projectDescriptionEs": "Soy Irma Pizarro, actualmente estudiante de licenciatura en Astrofísica con mención en Ciencia de Datos en la Universidad de Santiago. Mi investigación se centra en el estudio de las propiedades de polarización de los magnetares cerca del centro galáctico en las bandas 1 y 3 de ALMA.",
-    "profiles": {
-      "orcid": "https://orcid.org/0009-0000-7433-6322",
-      "linkedin": ""
-    }
+    "name": "Nicolás Seguel",
+    "slug": "nicolas-seguel",
+    "group": "students",
+    "position": "MSc Student in Engineering",
+    "education": "Electrical Engineer, PUC — M.Sc. Engineering (PUC)",
+    "area": "Antenna (RF) Design",
+    "img": "/images/miembros/nicolas-seguel.jpg",
+    "email": "neseguel@uc.cl",
+    "bio": "I'm an electrical engineer from UC Chile, where I'm now doing my Master's in Engineering. I work with RF and satellite communication systems, and these days you'll usually find me brewing some chemical baths. In the Antennas team I explore new and experimental ways of making RF components: we take 3D-printed plastic bodies and molds and electroplate them with copper, so they can work like high-performance metal pieces. We're also printing metal parts directly and figuring out how to process them to get the same performance.",
+    "skills": ["RF design", "Electrochemical processes", "3D printing", "HFSS"],
+    "hobbies": "Swimming, skiing, reading and videogames",
+    "profiles": {},
+    "adsNames": ["Seguel, N."]
   },
   {
-    "name": "Constanza Espinoza",
-    "currentRole": "Astronomy undergraduate student",
-    "img": "/images/miembros/cespinoza.jpg",
-    "email": "maria.espinoza.d@ug.uchile.cl",
-    "projectDescriptionEn": "Astronomy undergraduate student at Universidad de Chile, supervised by Prof. Tomás Cassanelli (Universidad de Chile) and Prof. Marilyn Cruces. Connie's research focuses on constraining the behaviour of periodic FRBs to better understand them, specifically modelling their activity window through time and frequency (actively collaborating with MPIfR). However, their interests extend beyond this project to include using FRBs as tools for cosmological probes, delving into observational cosmology, and employing radio astronomy for these purposes.",
-    "projectDescriptionEs": "Estudiante de pregrado en astronomía en la Universidad de Chile, supervisada por Prof. Tomás Cassanelli (Universidad de Chile) y Prof. Marilyn Cruces. La investigación de Connie se centra en restringir el comportamiento de las FRBs periódicas para comprenderlas mejor, específicamente modelando su ventana de actividad a través del tiempo y la frecuencia (colaborando activamente con MPIfR). Sin embargo, sus intereses se extienden más allá de este proyecto e incluyen el uso de FRBs como herramientas para realizar cosmológia, profundizando en la cosmología observacional y empleando la radioastronomía para estos fines.",
-    "profiles": {
-      "orcid": "https://orcid.org/0009-0009-6378-0992",
-      "linkedin": "www.linkedin.com/in/m-constanza-espinoza-dupouy-2786022b6"
-    }
-  },
-  {
-    "name": "Etienne Cabiac Manhey",
-    "currentRole": "B.Sc. in Electrical Engineering and M.Sc. student in Electrical Engineering at Pontificia Universidad Católica de Chile",
-    "img": "/images/miembros/Etienne.jpg",
+    "name": "Etienne Cabiac",
+    "slug": "etienne-cabiac",
+    "group": "students",
+    "position": "MSc Student in Engineering",
+    "education": "Electrical Engineer, PUC — M.Sc. Electrical Engineering (PUC)",
+    "area": "Digital Signal Processing",
+    "img": "/images/miembros/etienne-cabiac.jpg",
     "email": "etienne.cabiac@uc.cl",
-    "projectDescriptionEn": "Development of front-end multiplexation of antenna arrays using RF System-on-Chip (RFSoC) platforms. My research focuses on designing efficient hardware architectures for simultaneous signal acquisition and processing, enabling cost-effective and scalable instrumentation. These techniques are particularly aimed at improving the detection of Fast Radio Bursts (FRBs) and other transient radio phenomena.",
-    "projectDescriptionEs": "Desarrollo de la multiplexación de antenas en la parte frontal utilizando plataformas RF System-on-Chip (RFSoC). Mi investigación se centra en diseñar arquitecturas de hardware eficientes para la adquisición y el procesamiento simultáneo de señales, lo que permite una instrumentación rentable y escalable. Estas técnicas están orientadas especialmente a mejorar la detección de Estallidos Rápidos de Radio (FRBs) y otros fenómenos de radio transitorios.",
+    "bio": "I am an Electrical Engineer from Pontificia Universidad Católica de Chile (PUC), where I graduated with highest distinction. I am currently an MSc student in Electrical Engineering at PUC, advised by Prof. Marilyn Cruces, and a member of the technical staff of the CPS-RTC project at RTL. My work is on digital backends for detecting fast radio bursts (FRBs) with AMD RFSoC 4x2 boards. I designed and implemented FPGA receivers that sample the sky at 5 GS/s and channelise it with a polyphase filter bank and a 4096-point FFT. They then search the data for dispersed bursts. My thesis asks how these backends scale to arrays with many small antennas. It compares ways of sharing data converters between antennas: Hermitian pairing, frequency-division multiplexing, Walsh code division and compressive multiplexing. Each design is judged by how well it detects bursts. The work also includes simulation tools for FRB signals and a technical handbook for the backends.",
+    "skills": ["FPGA design (Vivado, Vitis HLS, VHDL)", "Signal processing", "Python"],
+    "hobbies": "Teaching (eleven semesters as a TA), 3D printing. Speaks French, Spanish and English",
     "profiles": {
       "orcid": "https://orcid.org/0009-0008-5394-049X",
       "linkedin": "https://www.linkedin.com/in/etiennecabiac/"
-    }
+    },
+    "adsNames": ["Cabiac, E.", "Cabiac Manhey, E."]
   },
   {
-    "name": "Luis",
-    "currentRole": "Research Team Member",
-    "img": "/images/miembros/luis.jpg",
-    "email": "lsrodrig@uc.cl",
-    "projectDescriptionEn": "Research team member working with RatLab. Role and project details to be updated.",
-    "projectDescriptionEs": "Miembro del equipo de investigación trabajando con RatLab. Rol y detalles del proyecto por actualizar.",
+    "name": "Agustina Berrios Herrera",
+    "slug": "agustina-berrios",
+    "group": "interns",
+    "position": "Undergraduate Intern",
+    "education": "Mechanical Engineering student, PUC",
+    "area": "Antenna (Mechanical) Design",
+    "img": "/images/miembros/agustina-berrios.jpg",
+    "bio": "I am a Mechanical Engineering student from Pontificia Universidad Católica de Chile, currently doing a research internship at AIUC. While studying, I've been a teaching assistant for almost 3 years, in courses like materials science, Engineering Challenges, and thermodynamics laboratory, and have done research in high-entropy alloys as catalysts for ammonia synthesis. My work here focuses on the mechanical design and manufacturing of the FRONTIERS radio antennas and their components, including the joints of a modular antenna dish and the structural supports for its feed. I model each component in CAD and run finite element studies to identify stress concentrations considering the external conditions of the working antenna. I'm evaluating the best materials and manufacturing options that can be produced locally in Chile.",
+    "skills": ["CAD modeling (Fusion 360, Solid Edge, NX)", "FEM analysis", "Materials characterization & selection"],
+    "hobbies": "Drawing, character design, music, urban dancing",
+    "profiles": {},
+    "adsNames": ["Berrios, A.", "Berrios Herrera, A."]
+  },
+  {
+    "name": "Juan Esteban Palacios",
+    "slug": "juan-esteban-palacios",
+    "group": "interns",
+    "position": "Undergraduate Intern",
+    "education": "Mechanical Engineering student, PUC",
+    "area": "Antenna (Energy Modelling) Design",
+    "img": "/images/miembros/juan-esteban-palacios.jpg",
+    "bio": "I am a Colombian mechanical engineering student at UC Chile with a background in physics, currently applying to the Master's program in solar energy at UC. Alongside my studies, I serve as Finance Coordinator for the Mechanical Engineering student chapter and work as an engineering research intern at the UC Astroengineering Center (AIUC). I am responsible for the off-grid power system for the FRONTIERS radio antennas. My work covers modelling the solar resource and energy demand at candidate sites, sizing the photovoltaic arrays and LFP battery banks, and evaluating reliability so the antennas can keep observing. I also work on the thermal design of the battery enclosures, on power architectures and on optimizing the system's cost.",
+    "skills": ["Energy system modelling (PV + battery)", "Heat transfer", "Optimization", "Python"],
+    "hobbies": "Working out, tennis, video editing",
+    "profiles": {},
+    "adsNames": ["Palacios, J. E.", "Palacios, J."]
+  },
+  {
+    "name": "Antonia Merdanevic Yáñez",
+    "slug": "antonia-merdanevic",
+    "group": "interns",
+    "position": "Undergraduate Intern",
+    "education": "Mechanical Engineering student (minor in Mechatronics), PUC",
+    "area": "Antenna (Mechanical) Design",
+    "img": "/images/miembros/antonia-merdanevic.jpg",
+    "bio": "I am a Mechanical Engineering student (minor in Mechatronics) at Pontificia Universidad Católica de Chile. At the Astroengineering Center UC, I am part of the Radio Transients Lab, where I lead the mechanical design of the reflector for FRONTIERS, a compact array of 23 six-meter radio telescope antennas to detect FRBs in the 1 to 2 GHz band. The reflector is a glass fiber reinforced polymer (GFRP) dish with an embedded aluminum mesh as its reflective surface. I presented this work at SPIE Astronomical Telescopes + Instrumentation 2026 in Copenhagen and co-authored the accompanying proceedings paper. My work is part of a broader effort to bring radio astronomy instrumentation closer to local capabilities in Chile and Latin America. My long-term goal is to pursue graduate studies in astronomical instrumentation and space systems.",
+    "skills": ["Composite materials", "Structural analysis", "Technical writing", "Science communication"],
+    "hobbies": "Astrophotography, playing instruments, singing, dancing",
+    "profiles": {},
+    "adsNames": ["Merdanevic, A.", "Merdanevic Yáñez, A."]
+  },
+  {
+    "name": "Vicente Lara Takasaki",
+    "slug": "vicente-lara",
+    "group": "interns",
+    "position": "Undergraduate Intern",
+    "education": "Mechanical Engineering student, PUC",
+    "area": "Antenna (Mechanical) Design",
+    "img": "/images/miembros/vicente-lara.jpg",
+    "bio": "I am a Nikkei mechanical engineering student at Pontificia Universidad Católica de Chile with a strong interest in mechanical design and materials science. Previously, I assisted with materials characterization research at MIGA (Millennium Institute of Green Ammonia) and served as a teaching assistant for materials science and other laboratory-centered courses. I am currently completing an internship under the supervision of Professor Marilyn Cruces. My main project involves designing the mount for the FRONTIERS radio antenna, focusing on optimizing power consumption, cost-effectiveness, and ease of use. Alongside this, I research alternative power-generation methods and assist fellow lab members with experimental work.",
+    "skills": ["3D modeling", "Materials characterization & analysis", "Mechanical design", "Laboratory work"],
+    "hobbies": "Cooking, aeromodeling, weightlifting, playing guitar",
+    "profiles": {},
+    "adsNames": ["Lara, V.", "Lara Takasaki, V."]
+  },
+  {
+    "name": "Matilde Calderón",
+    "slug": "matilde-calderon",
+    "group": "interns",
+    "position": "Undergraduate Intern",
+    "education": "Electrical Engineering student, PUC",
+    "area": "Antenna (RF) Design",
+    "img": "/images/miembros/matilde-calderon.jpg",
+    "bio": "I am a third-year Electrical Engineering student at UC Chile with an interest in research, RF hardware, circuit design, and international academic experiences. Alongside my studies, I serve as a teaching assistant in embedded systems and wireless communications—teaching how to program ESP32 microcontrollers and integrate them with radio modules—and work as an engineering research intern at the UC Astroengineering Center (AIUC). At AIUC, I am currently collaborating on research into antenna manufacturing. My background also includes designing, building, and characterizing a monopole antenna.",
+    "skills": ["Python", "Electromagnetic simulation", "RF hardware"],
+    "hobbies": "Pilates, walking, volunteering",
+    "profiles": {},
+    "adsNames": ["Calderón, M.", "Calderon, M."]
+  },
+  {
+    "name": "Jamil Arana",
+    "slug": "jamil-arana",
+    "group": "interns",
+    "position": "Undergraduate Intern",
+    "education": "Electrical Engineering student, PUC",
+    "area": "Digital Signal Processing",
+    "img": "/images/miembros/jamil-arana.jpg",
+    "bio": "I am an Electrical Engineering student at Pontificia Universidad Católica de Chile (UC), currently working as an R&D Research Assistant at RTL. My work focuses on Software-Defined Radio (SDR) systems and RF signal processing, and my current project involves simulating satellite signals to test an RF satellite reception system.",
+    "profiles": {},
+    "adsNames": ["Arana, J."]
+  },
+  {
+    "name": "Bastián Riquelme",
+    "slug": "bastian-riquelme",
+    "group": "interns",
+    "position": "Undergraduate Intern",
+    "education": "Electrical Engineering student, PUC",
+    "area": "Digital Signal Processing",
+    "img": "",
+    "bio": "I am an undergraduate engineering student majoring in Electrical Engineering at the Pontificia Universidad Católica de Chile. I am currently implementing remote control systems for a software-defined radio (SDR) transceiver using a Raspberry Pi and a Pluto+ SDR. Part of this project will soon be used to integrate hardware description tools directly on the Raspberry Pi.",
+    "profiles": {},
+    "adsNames": ["Riquelme, B."]
+  },
+  {
+    "name": "Cristóbal Braga",
+    "slug": "cristobal-braga",
+    "group": "team",
+    "position": "Astronomy, Universidad de Chile",
+    "education": "Bachelor's Degree in Astronomy, Universidad de Chile",
+    "area": "FRB science & data pipelines",
+    "img": "/images/miembros/cristobal-braga.jpg",
+    "email": "cristobal.braga@ug.uchile.cl",
+    "bio": "Bachelor's in Astronomy at Universidad de Chile specializing in radio astronomy and data science. Focused on Fast Radio Bursts (FRBs) simulation, targeted searches for repeating FRBs, and developing integrated data processing pipelines. Interested in applying machine learning techniques for FRB classification and prediction.",
     "profiles": {
-      "orcid": "",
-      "linkedin": ""
-    }
+      "orcid": "https://orcid.org/0009-0000-6017-4211",
+      "linkedin": "https://www.linkedin.com/in/cristóbal-braga-viñals-938144305/"
+    },
+    "adsNames": ["Braga, C.", "Braga, C. A."]
+  },
+  {
+    "name": "Nicolás Bermedo",
+    "slug": "nicolas-bermedo",
+    "group": "team",
+    "position": "Computer Science Engineering Student",
+    "education": "Computer Science Engineering, PUC",
+    "area": "Machine learning for FRB detection",
+    "img": "/images/miembros/nicolas-bermedo.jpg",
+    "email": "nabermedo@uc.cl",
+    "bio": "I research the development and optimization of deep learning-based pipelines for the automatic detection and classification of transient astronomical events, with a particular focus on Fast Radio Bursts (FRBs).",
+    "profiles": {
+      "orcid": "https://orcid.org/0009-0002-5164-9187"
+    },
+    "adsNames": ["Bermedo, N."]
+  },
+  {
+    "name": "Irma Sáez",
+    "slug": "irma-saez",
+    "group": "team",
+    "position": "Bachelor student in Astrophysics (Data Science), Universidad de Santiago",
+    "education": "Astrophysics with specialization in Data Science, USACH",
+    "area": "Magnetar polarization with ALMA",
+    "img": "/images/miembros/irma-saez.jpg",
+    "email": "irma.pizarro@usach.cl",
+    "bio": "Bachelor student in Astrophysics with a specialization in Data Science at Universidad de Santiago. Research focuses on studying the polarization properties of magnetars near the Galactic Center in Bands 1 and 3 of ALMA.",
+    "profiles": {
+      "orcid": "https://orcid.org/0009-0000-7433-6322"
+    },
+    "adsNames": ["Pizarro, I.", "Sáez, I.", "Saez, I."],
+    "pending": true
   },
   {
     "name": "Vicente Florez",
-    "currentRole": "Research Team Member",
-    "img": "/images/miembros/vflorez.jpg",
+    "slug": "vicente-florez",
+    "group": "team",
+    "position": "Research Team Member",
+    "img": "/images/miembros/vicente-florez.jpg",
     "email": "vicente.florez@uc.cl",
-    "projectDescriptionEn": "Research team member working with RatLab. Role and project details to be updated.",
-    "projectDescriptionEs": "Miembro del equipo de investigación trabajando con RatLab. Rol y detalles del proyecto por actualizar.",
-    "profiles": {
-      "orcid": "",
-      "linkedin": ""
-    }
+    "bio": "",
+    "profiles": {},
+    "adsNames": ["Florez, V."],
+    "pending": true
   },
   {
-    "name": "Juan Jose Sanchez",
-    "currentRole": "Research Team Member",
-    "img": "/images/miembros/jjsanchez.jpg",
-    "email": "jjsanchezmedina@gmail.com",
-    "projectDescriptionEn": "Research team member working with RatLab. Role and project details to be updated.",
-    "projectDescriptionEs": "Miembro del equipo de investigación trabajando con RatLab. Rol y detalles del proyecto por actualizar.",
-    "profiles": {
-      "orcid": "",
-      "linkedin": ""
-    }
-  },
-  {
-    "name": "Nicolas",
-    "currentRole": "Research Team Member",
-    "img": "/images/miembros/nicolas.jpg",
-    "email": "neseguel@uc.cl",
-    "projectDescriptionEn": "Research team member working with RatLab. Role and project details to be updated.",
-    "projectDescriptionEs": "Miembro del equipo de investigación trabajando con RatLab. Rol y detalles del proyecto por actualizar.",
-    "profiles": {
-      "orcid": "",
-      "linkedin": ""
-    }
-  },
-  {
-    "name": "Lucas",
-    "currentRole": "Research Team Member",
-    "img": "/images/miembros/lucas.jpg",
+    "name": "Lucas Becker",
+    "slug": "lucas-becker",
+    "group": "team",
+    "position": "Research Team Member",
+    "img": "/images/miembros/lucas-becker.jpg",
     "email": "lbeckerf@uc.cl",
-    "projectDescriptionEn": "Research team member working with RatLab. Role and project details to be updated.",
-    "projectDescriptionEs": "Miembro del equipo de investigación trabajando con RatLab. Rol y detalles del proyecto por actualizar.",
-    "profiles": {
-      "orcid": "",
-      "linkedin": ""
-    }
+    "bio": "",
+    "profiles": {},
+    "adsNames": ["Becker, L."],
+    "pending": true
   },
   {
-    "name": "Emiliano",
-    "currentRole": "Research Team Member",
-    "img": "/images/miembros/emiliano.jpg",
-    "email": "ebermudez2020@udec.cl",
-    "projectDescriptionEn": "Research team member working with RatLab. Role and project details to be updated.",
-    "projectDescriptionEs": "Miembro del equipo de investigación trabajando con RatLab. Rol y detalles del proyecto por actualizar.",
-    "profiles": {
-      "orcid": "",
-      "linkedin": ""
-    }
+    "name": "Ajay Kumar",
+    "slug": "ajay-kumar",
+    "group": "team",
+    "position": "Research Team Member",
+    "img": "/images/miembros/ajay-kumar.jpg",
+    "bio": "",
+    "profiles": {},
+    "adsNames": [],
+    "pending": true
+  },
+  {
+    "name": "José Sandoval",
+    "slug": "jose-sandoval",
+    "group": "team",
+    "position": "Research Team Member",
+    "img": "/images/miembros/jose-sandoval.jpg",
+    "bio": "",
+    "profiles": {},
+    "adsNames": ["Sandoval, J."],
+    "pending": true
+  },
+  {
+    "name": "Nicolás Allende",
+    "slug": "nicolas-allende",
+    "group": "team",
+    "position": "Research Team Member",
+    "img": "/images/miembros/nicolas-allende.jpg",
+    "bio": "",
+    "profiles": {},
+    "adsNames": ["Allende, N."],
+    "pending": true
+  },
+  {
+    "name": "Santiago Arntz",
+    "slug": "santiago-arntz",
+    "group": "team",
+    "position": "Research Team Member",
+    "img": "/images/miembros/santiago-arntz.jpg",
+    "bio": "",
+    "profiles": {},
+    "adsNames": ["Arntz, S."],
+    "pending": true
   }
 ]

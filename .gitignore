@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# originales de fotos y documentos entregados por el grupo (pesados)
+Fotos estudiantes-*/

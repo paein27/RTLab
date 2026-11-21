@@ -1,80 +1,75 @@
 ---
 // src/components/Navbar.astro
-const base = import.meta.env.BASE_URL;
-const resolveUrl = (path: string) => {
-  if (path === "/") {
-    return base;
-  }
-  const cleanPath = path.startsWith("/") ? path.substring(1) : path;
-  return `${base}${cleanPath}`;
-};
+import site from "../data/site.json";
+
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/research", label: "Research" },
+  { href: "/members", label: "Members" },
+  { href: "/publications", label: "Publications" },
+  { href: "/outreach", label: "Outreach" },
+  { href: "/resources", label: "Resources" },
+  { href: "/contact", label: "Contact" },
+];
+
+const current = Astro.url.pathname.replace(/\/$/, "") || "/";
+const isActive = (href: string) =>
+  href === "/" ? current === "/" : current.startsWith(href);
 ---
 
-<nav
-  class="relative text-white bg-center bg-cover"
-  style={`background-image: url('${resolveUrl("/images/background/Background3.jpg")}');`}
->
-  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-  <div
-    class="relative container mx-auto max-w-7xl flex items-center justify-between py-4 px-4"
-  >
-    <a
-      href={resolveUrl("/")}
-      class="flex items-center space-x-2 text-2xl font-bold"
-    >
+<header class="sticky top-0 z-40 bg-brand-900/95 backdrop-blur border-b border-white/10 shadow-sm">
+  <nav class="relative max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
+    <a href="/" class="flex items-center shrink-0" aria-label={`${site.name} – Home`}>
       <img
-        src={resolveUrl("/images/logo/ratLab-logo-removebg-preview.png")}
-        alt="Logo RatLab"
-        class="h-30 w-30"
+        src={site.logo.white}
+        alt={`${site.shortName} – ${site.name}`}
+        class="h-14 md:h-16 w-auto"
+        width="900"
+        height="492"
       />
     </a>
+
     <button
       id="menu-toggle"
-      class="lg:hidden focus:outline-none ml-auto p-2 rounded-md bg-black bg-opacity-40 hover:bg-opacity-60 transition"
+      class="lg:hidden p-2 rounded-md text-white hover:bg-white/10"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="nav-menu"
     >
-      <svg
-        id="icon-open"
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-7 w-7"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"></path>
+      <svg id="icon-open" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
-      <svg
-        id="icon-close"
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-7 w-7 hidden"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M6 18L18 6M6 6l12 12"></path>
+      <svg id="icon-close" class="h-7 w-7 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
       </svg>
     </button>
+
     <ul
       id="nav-menu"
-      class="hidden absolute top-full left-0 w-full flex-col bg-black bg-opacity-90 p-4 space-y-4 text-lg font-semibold text-center lg:text-xl lg:flex lg:static lg:flex-row lg:items-center lg:space-y-0 lg:space-x-8 lg:bg-transparent lg:p-0 lg:ml-8 lg:flex-1 lg:justify-center"
+      class="hidden absolute top-full left-0 w-full flex-col gap-1 bg-brand-900 border-b border-white/10 p-4 shadow-lg lg:bg-transparent lg:shadow-none lg:border-0 lg:p-0 lg:static lg:w-auto lg:flex lg:flex-row lg:items-center lg:gap-1"
     >
-      <li><a href={resolveUrl("/")}>Home</a></li>
-      <li><a href={resolveUrl("/outreach")}>Outreach</a></li>
-      <li><a href={resolveUrl("/research")}>Research</a></li>
-      <li><a href={resolveUrl("/members")}>Members</a></li>
-      <li><a href={resolveUrl("/publications")}>Publications</a></li>
-      <li><a href={resolveUrl("/resources")}>Resources</a></li>
-      <li><a href={resolveUrl("/contact")}>Contact</a></li>
+      {
+        links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class:list={[
+                "block px-3 py-2 rounded-md font-display text-sm font-semibold tracking-wide",
+                isActive(link.href)
+                  ? "text-white bg-white/15"
+                  : "text-brand-100 hover:text-white hover:bg-white/10",
+              ]}
+              aria-current={isActive(link.href) ? "page" : undefined}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
     </ul>
-  </div>
-</nav>
+  </nav>
+</header>
+
 <script>
   const btn = document.getElementById("menu-toggle");
   const menu = document.getElementById("nav-menu");
@@ -82,8 +77,9 @@ const resolveUrl = (path: string) => {
   const closeIcon = document.getElementById("icon-close");
 
   btn?.addEventListener("click", () => {
-    menu?.classList.toggle("hidden");
+    const hidden = menu?.classList.toggle("hidden");
     openIcon?.classList.toggle("hidden");
     closeIcon?.classList.toggle("hidden");
+    btn.setAttribute("aria-expanded", hidden ? "false" : "true");
   });
 </script>

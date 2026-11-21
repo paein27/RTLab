@@ -1,0 +1,23 @@
+{
+  "name": "Radio Transients Lab",
+  "shortName": "RTL",
+  "tagline": "Radio transients, instrumentation and data science",
+  "description": "Radio Transients Lab (RTL) at the Astroengineering Center UC (AIUC), Pontificia Universidad Católica de Chile. We study Fast Radio Bursts, pulsars and magnetars, and build the instruments to detect them.",
+  "institution": {
+    "name": "Astroengineering Center UC (AIUC)",
+    "university": "Pontificia Universidad Católica de Chile",
+    "url": "https://aiuc.puc.cl"
+  },
+  "logo": {
+    "full": "/images/logo/rtl-logo.png",
+    "white": "/images/logo/rtl-logo-white.png",
+    "monogram": "/images/logo/rtl-monogram.png",
+    "favicon": "/images/logo/favicon-32.png",
+    "appleTouch": "/images/logo/favicon-180.png"
+  },
+  "contactEmail": "ratlab@astro.puc.cl",
+  "ads": {
+    "libraryId": "q7ce2driS9W-SkN3IcOqNA"
+  },
+  "siteUrl": "https://your-site.netlify.app"
+}

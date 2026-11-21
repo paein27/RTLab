@@ -2,19 +2,16 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
+import site from './src/data/site.json' with { type: 'json' };
 
 export default defineConfig({
-  // URL pública de tu sitio (sin slash al final). Actualiza esta URL con el
-  // dominio de tu deployment en Netlify o el que prefieras.
-  site: 'https://your-site.netlify.app',
-  // Ruta base para todas las páginas. Para Netlify debe ser la raíz `/` para
-  // que los estilos e imágenes se resuelvan correctamente.
+  // URL pública del sitio (se define en src/data/site.json → siteUrl).
+  site: site.siteUrl,
   base: '/',
   output: 'static',
   integrations: [
-    tailwind(),
-    sitemap({
-      // (opcional) puedes pasarle aquí opciones como changefreq, priority, etc.
-    }),
+    // Los estilos base de Tailwind se cargan desde src/styles/global.css
+    tailwind({ applyBaseStyles: false }),
+    sitemap(),
   ],
 });

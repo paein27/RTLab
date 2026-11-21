@@ -1,66 +1,51 @@
 ---
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 import MemberCard from "../components/MemberCard.astro";
-import team from "../data/team.json";
+import { team, groups } from "../lib/team";
+import site from "../data/site.json";
 
-const base = import.meta.env.BASE_URL;
-const resolveUrl = (path: string) => {
-  if (path === "/") {
-    return base;
-  }
-  const cleanPath = path.startsWith("/") ? path.substring(1) : path;
-  return `${base}${cleanPath}`;
-};
-
-// Map image paths using resolveUrl
-const teamWithResolvedImg = team.map((member) => ({
-  ...member,
-  img: resolveUrl(member.img),
-}));
+const sections = groups
+  .map((g) => ({ ...g, members: team.filter((m) => m.group === g.key) }))
+  .filter((g) => g.members.length > 0);
 ---
 
-<DefaultLayout>
-  <div class="max-w-7xl mx-auto px-4 py-8">
-    <div class="mb-12">
-      <h2 class="text-4xl font-bold mb-6 text-center text-gray-900">
-        Our Team
-      </h2>
-      <p
-        class="text-xl text-gray-600 text-center max-w-4xl mx-auto leading-relaxed"
-      >
-        Meet the researchers and scientists behind RatLab, specializing in radio
-        astronomy, data science, and astronomical instrumentation for transient
-        source detection and analysis.
-      </p>
-    </div>
-
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
-    >
+<DefaultLayout title="Members">
+  <header class="mb-12 text-center">
+    <p class="eyebrow">Our team</p>
+    <h1 class="mt-2 text-4xl md:text-5xl font-bold">People of {site.shortName}</h1>
+    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+      Engineers, astronomers and students working together at the {site.institution.name}
+      on radio transients, RF instrumentation and the FRONTIERS radio telescope.
+    </p>
+    <nav class="mt-6 flex flex-wrap justify-center gap-2 text-sm" aria-label="Team sections">
       {
-        teamWithResolvedImg.map((member) => {
-          // Generate ID from name for anchor links
-          const memberId = member.name
-            .toLowerCase()
-            .replace(/[^a-z0-9\s-]/g, "")
-            .replace(/\s+/g, "-")
-            .replace(/-+/g, "-")
-            .trim();
-
-          return (
-            <div id={memberId} class="scroll-mt-20">
-              <MemberCard
-                name={member.name}
-                currentRole={member.currentRole}
-                img={member.img}
-                email={member.email}
-                projectDescriptionEn={member.projectDescriptionEn}
-                profiles={member.profiles}
-              />
-            </div>
-          );
-        })
+        sections.map((s) => (
+          <a href={`#group-${s.key}`} class="rounded-full border border-brand-200 bg-white px-3 py-1 text-brand-800 hover:bg-brand-100">
+            {s.title}
+          </a>
+        ))
       }
-    </div>
-  </div>
+    </nav>
+  </header>
+
+  {
+    sections.map((section) => (
+      <section id={`group-${section.key}`} class="mb-16 scroll-mt-28">
+        <div class="mb-6 flex items-center gap-4">
+          <h2 class="text-2xl font-bold">{section.title}</h2>
+          <span class="h-px flex-1 bg-brand-200" />
+          <span class="text-sm text-gray-500">{section.members.length}</span>
+        </div>
+        {section.key === "lead" ? (
+          <div class="max-w-5xl">
+            {section.members.map((m) => <MemberCard member={m} featured />)}
+          </div>
+        ) : (
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {section.members.map((m) => <MemberCard member={m} />)}
+          </div>
+        )}
+      </section>
+    ))
+  }
 </DefaultLayout>

@@ -1,114 +1,67 @@
-# RatLab - Sitio Web del Grupo de Radio Transientes PUC
+# Radio Transients Lab (RTL) – Sitio web
 
-Este repositorio contiene el código fuente del sitio web de RatLab, el Grupo de Investigación de Radio Transientes de la Pontificia Universidad Católica de Chile. El sitio está construido con [Astro](https://astro.build/) y estilizado con [Tailwind CSS](https://tailwindcss.com/).
+Sitio web del **Radio Transients Lab (RTL)**, Astroengineering Center UC (AIUC), Pontificia Universidad Católica de Chile. Está hecho con [Astro](https://astro.build/) (sitio estático) y [Tailwind CSS](https://tailwindcss.com/).
 
-## 🚀 Estructura del Proyecto
-
-El proyecto sigue la estructura estándar de Astro, con algunas adiciones específicas:
+## Estructura
 
 ```text
 /
-├── public/                   # Archivos estáticos (imágenes, favicon, etc.)
-│   ├── images/
-│   │   ├── miembros/         # Imágenes de los miembros del equipo
-│   │   └── banner-transient.jpg # Imagen para el componente Hero
-│   └── favicon.svg
+├── public/
+│   ├── images/logo/        # Logo RTL (color, blanco, monograma) y favicons
+│   └── images/miembros/    # Retratos 600×600 (<slug>.jpg)
 ├── src/
-│   ├── assets/               # Otros assets como SVGs
-│   ├── components/           # Componentes reutilizables de Astro (.astro)
-│   │   ├── Navbar.astro
-│   │   ├── Footer.astro
-│   │   ├── Hero.astro
-│   │   ├── MemberCard.astro
-│   │   └── PublicationCard.astro
-│   ├── data/                 # Archivos de datos (ej. team.json, aunque actualmente vacío)
-│   │   └── team.json
-│   ├── layouts/              # Layouts base para las páginas
-│   │   └── DefaultLayout.astro
-│   ├── pages/                # Páginas del sitio (.astro)
-│   │   ├── index.astro       (Página de Inicio)
-│   │   ├── about.astro       (Sobre Nosotros)
-│   │   ├── research.astro    (Investigación)
-│   │   ├── members.astro     (Miembros)
-│   │   ├── publications.astro(Publicaciones)
-│   │   └── contact.astro     (Contacto)
-│   └── styles/               # Estilos globales y variables CSS
-│       └── global.css
-├── .github/
-│   └── workflows/
-│       └── deploy.yml        # Workflow de GitHub Actions para despliegue en GitHub Pages
-├── astro.config.mjs          # Configuración principal de Astro
-├── tailwind.config.cjs       # Configuración de Tailwind CSS
-├── package.json              # Dependencias y scripts del proyecto
-└── tsconfig.json             # Configuración de TypeScript para Astro
+│   ├── data/
+│   │   ├── site.json       # Nombre, logo, institución, correo, ID de la biblioteca ADS
+│   │   └── team.json       # Integrantes del grupo
+│   ├── lib/
+│   │   ├── team.ts         # Tipos, grupos y coincidencia de autores ADS ↔ miembros
+│   │   └── ads.ts          # Consulta a NASA ADS (en el build)
+│   ├── components/         # Navbar, Footer, MemberCard
+│   ├── layouts/            # DefaultLayout (head, navbar, footer)
+│   ├── pages/              # index, research, members, publications, outreach, resources, contact
+│   │   └── api/publications.json.ts  # Exporta las publicaciones como JSON
+│   └── styles/global.css   # Estilos base y componentes (.card, .btn-primary, .starfield…)
+├── tailwind.config.cjs     # Paleta `brand-*` y fuentes (Montserrat / Inter)
+└── astro.config.mjs
 ```
 
-Para más detalles sobre la estructura de proyectos Astro, consulta la [documentación oficial](https://docs.astro.build/es/core-concepts/project-structure/).
+## Comandos
 
-## 🛠️ Requisitos Previos
+| Comando           | Acción                                          |
+| :---------------- | :---------------------------------------------- |
+| `npm install`     | Instala dependencias                            |
+| `npm run dev`     | Servidor de desarrollo en `http://localhost:4321` |
+| `npm run build`   | Compila el sitio en `./dist/` (consulta ADS)    |
+| `npm run preview` | Sirve localmente la compilación de `./dist/`    |
 
-Asegúrate de tener instalado [Node.js](https://nodejs.org/) (se recomienda la versión LTS, actualmente v18 según el workflow de despliegue). `npm` viene incluido con Node.js.
+## Editar contenido
 
-## ⚙️ Instalación
+- **Nombre, logo, correo, institución:** `src/data/site.json`.
+- **Integrantes:** `src/data/team.json`. Cada entrada tiene:
+  - `group`: `lead`, `staff`, `students`, `interns` o `team` (define la sección en *Members*).
+  - `img`: ruta a `public/images/miembros/<slug>.jpg` (cuadrada, ~600 px). Si se deja vacío se muestran las iniciales.
+  - `adsNames`: cómo aparece la persona como autora en ADS (`"Apellido, N."`). Sirve para resaltar sus nombres en *Publications*.
+  - `pending: true` marca perfiles con datos por completar.
+- **Colores:** usar siempre las clases `brand-*` (definidas en `tailwind.config.cjs`) en vez de `blue-*`.
 
-1.  Clona el repositorio:
+## Publicaciones (NASA ADS)
 
-    ```bash
-    git clone https://github.com/tu-usuario/RatLab.git # Reemplaza con tu URL de repositorio
-    cd RatLab
-    ```
+Las publicaciones se leen de la biblioteca pública de ADS (`site.json → ads.libraryId`) **al compilar**. El token nunca llega al navegador.
 
-2.  Instala las dependencias:
-    ```bash
-    npm install
-    ```
+1. Genera un token en <https://ui.adsabs.harvard.edu> → *Account* → *Settings* → *API Token*. La biblioteca tiene que ser pública o pertenecer a la cuenta del token.
+2. Copia `.env.example` como `.env` y completa `ADS_API_KEY=...`.
+3. Ejecuta `npm run build`. Cada build trae la lista actualizada; para que se actualice sola basta con programar un build diario en el servidor.
 
-## 🧞 Comandos Disponibles
+### Lista manual (sin token)
 
-Todos los comandos se ejecutan desde la raíz del proyecto:
+Sin token, o si ADS falla, el sitio usa `src/data/publications.json`. Para agregar un paper:
 
-| Comando             | Acción                                                                    |
-| :------------------ | :------------------------------------------------------------------------ |
-| `npm run dev`       | Inicia el servidor de desarrollo local en `http://localhost:4321/RatLab/` |
-| `npm run build`     | Compila el sitio para producción en la carpeta `./dist/`                  |
-| `npm run preview`   | Previsualiza la compilación de producción localmente                      |
-| `npm run astro ...` | Ejecuta comandos de la CLI de Astro como `astro add`, `astro check`       |
+1. Agrégalo primero a la biblioteca en ADS, para que ambas fuentes coincidan.
+2. Copia una entrada de `publications.json` y completa `bibcode`, `title`, `authors` (formato `"Apellido, N."`), `journal`, `year`, `date`, `doi`, `arxiv`, `citations` y `refereed`. Todos los datos están en la página del paper en ADS.
+3. Actualiza `updatedAt` y ejecuta `npm run build`.
 
-**Nota importante sobre `base`:**
-Originalmente el proyecto estaba configurado con `base: '/RatLab/'` en
-[`astro.config.mjs`](astro.config.mjs) para ser publicado en un subdirectorio de
-GitHub Pages. Si lo despliegas en Netlify (o en la raíz de cualquier servidor)
-debes cambiar la opción a `base: '/'`; de lo contrario los estilos e imágenes no
-se cargarán correctamente.
+La lista manual no incluye los resúmenes; esos se cargan solo cuando se usa el token.
 
-- En desarrollo con `base: '/RatLab/'` el sitio se sirve desde
-  `http://localhost:4321/RatLab/`.
-- En producción (por ejemplo GitHub Pages) el sitio estará disponible en
-  `https://<tu-usuario>.github.io/RatLab/`.
-  Los enlaces internos en los componentes (como en
-  [`src/components/Navbar.astro`](src/components/Navbar.astro)) utilizan
-  `import.meta.env.BASE_URL` para construir las rutas correctamente.
+## Despliegue
 
-## 🚀 Despliegue
-
-Este proyecto está configurado para desplegarse automáticamente en GitHub Pages cada vez que se hace un `push` a la rama `main`. Esto se gestiona a través del workflow definido en [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
-
-## ✨ Características Principales
-
-- **Astro**: Framework moderno para construir sitios web rápidos y optimizados.
-- **Tailwind CSS**: Framework CSS utility-first para un diseño rápido y personalizable.
-- **Componentes Reutilizables**: Estructura modular con componentes para la barra de navegación, pie de página, tarjetas de miembros, etc.
-- **Despliegue Automatizado**: Integración con GitHub Actions para despliegue continuo en GitHub Pages.
-- **Configuración de `base`**: Preparado para ser servido desde un subdirectorio (`/RatLab/`).
-
-## 🤝 Contribuir
-
-Si deseas contribuir al proyecto, por favor sigue los siguientes pasos:
-
-1.  Haz un Fork del repositorio.
-2.  Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
-3.  Realiza tus cambios y haz commit (`git commit -m 'Añade nueva funcionalidad'`).
-4.  Haz push a la rama (`git push origin feature/nueva-funcionalidad`).
-5.  Abre un Pull Request.
-
----
+Actualmente en Netlify (`npm run build`, carpeta `dist/`). La migración a un servidor propio está pendiente.

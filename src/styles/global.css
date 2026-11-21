@@ -1,16 +1,64 @@
-/* src/styles/global.css */
+/* src/styles/global.css — importado desde DefaultLayout.astro */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-  font-family: system-ui, sans-serif;
-  margin: 0;
-  background-color: #f9fafb;
-  color: #1a1a1a;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-brand-50 text-gray-800 font-sans antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-brand-900;
+  }
+  a {
+    @apply transition-colors;
+  }
 }
-.container {
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 0 1rem;
+
+@layer components {
+  /* Fondo estrellado como el interior de la "T" del logo */
+  .starfield {
+    background-color: #111829;
+    background-image:
+      radial-gradient(1px 1px at 10% 20%, rgba(255, 255, 255, 0.8), transparent 60%),
+      radial-gradient(1px 1px at 30% 70%, rgba(255, 255, 255, 0.6), transparent 60%),
+      radial-gradient(1.5px 1.5px at 55% 35%, rgba(255, 255, 255, 0.9), transparent 60%),
+      radial-gradient(1px 1px at 75% 15%, rgba(255, 255, 255, 0.7), transparent 60%),
+      radial-gradient(1px 1px at 85% 60%, rgba(255, 255, 255, 0.5), transparent 60%),
+      radial-gradient(1.5px 1.5px at 20% 85%, rgba(255, 255, 255, 0.7), transparent 60%),
+      radial-gradient(1px 1px at 65% 80%, rgba(255, 255, 255, 0.6), transparent 60%),
+      radial-gradient(1px 1px at 45% 10%, rgba(255, 255, 255, 0.5), transparent 60%),
+      radial-gradient(1px 1px at 92% 88%, rgba(255, 255, 255, 0.7), transparent 60%),
+      radial-gradient(ellipse at 50% 120%, rgba(111, 143, 208, 0.55), transparent 60%),
+      linear-gradient(180deg, #111829 0%, #1b2540 55%, #31497d 100%);
+    background-size:
+      220px 220px, 260px 260px, 300px 300px, 240px 240px, 280px 280px,
+      320px 320px, 200px 200px, 340px 340px, 260px 260px, 100% 100%, 100% 100%;
+  }
+
+  .card {
+    @apply bg-white rounded-xl border border-brand-100 shadow-sm transition-shadow duration-200 hover:shadow-md;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg bg-brand-600 text-white font-semibold shadow-sm hover:bg-brand-700;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg border border-brand-200 bg-white text-brand-800 font-semibold hover:bg-brand-50 hover:border-brand-300;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-brand-900;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-brand-500;
+  }
 }
-/* Añade aquí estilos personalizados si los necesitas */

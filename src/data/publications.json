@@ -1,0 +1,110 @@
+{
+  "_info": "Lista manual de publicaciones. Se usa cuando no hay ADS_API_KEY o cuando ADS no responde. Fuente: biblioteca pública de ADS del grupo. Para agregar un paper, copia una entrada y completa los campos (bibcode y enlaces desde la página del paper en ui.adsabs.harvard.edu).",
+  "updatedAt": "2026-11-21",
+  "publications": [
+    {
+      "bibcode": "2026A&A...707A.335E",
+      "title": "Chromatic activity window of periodic fast radio bursts: FRB 20121102A and FRB 20180916B",
+      "authors": ["Espinoza-Dupouy, M. C.", "Cruces, M.", "Cassanelli, T.", "Braga, C. A.", "Bermúdez, E.", "Vera-Casanova, J."],
+      "journal": "Astronomy & Astrophysics, Volume 707, id.A335",
+      "year": 2026,
+      "date": "March 2026",
+      "doi": "10.1051/0004-6361/202556269",
+      "arxiv": "2507.04609",
+      "keywords": ["methods: data analysis", "radio continuum: general"],
+      "citations": 4,
+      "refereed": true
+    },
+    {
+      "bibcode": "2025A&A...701A.191V",
+      "title": "Observing radio transients with Phased ALMA: Pulses from the Galactic Centre magnetar",
+      "authors": ["Vera-Casanova, J.", "Cruces, M.", "Liu, K.", "Wongphechauxsorn, J.", "Braga, C. A.", "Kramer, M.", "Torne, P.", "Limaye, P.", "Espinoza-Dupouy, M. C.", "Rodriguez, L."],
+      "journal": "Astronomy & Astrophysics, Volume 701, id.A191",
+      "year": 2025,
+      "date": "September 2025",
+      "doi": "10.1051/0004-6361/202555088",
+      "arxiv": "2504.06234",
+      "keywords": ["methods: observational", "stars: magnetars", "stars: neutron", "Galaxy: center", "radio continuum: general"],
+      "citations": 3,
+      "refereed": true
+    },
+    {
+      "bibcode": "2025ApJ...982..107T",
+      "title": "Single-pulse Morphology of PSR J1935+1616 (B1933+16) Based on Archival Data from FAST",
+      "authors": ["Tian, R. W.", "Zhao, R. S.", "Cruces, Marilyn", "Liu, H.", "Li, D.", "Wang, P.", "Niu, C. H.", "Gong, Biping", "Miao, C. C.", "Zhu, X.", "Xu, H. W.", "Li, W. L.", "Wang, S. D.", "Tu, Z. F.", "Zhi, Q. J.", "Dang, S. J.", "Shang, L. H.", "Xiao, S."],
+      "journal": "The Astrophysical Journal, Volume 982, id.107",
+      "year": 2025,
+      "date": "April 2025",
+      "doi": "10.3847/1538-4357/adb7cd",
+      "arxiv": "2502.09342",
+      "keywords": [],
+      "citations": 2,
+      "refereed": true
+    },
+    {
+      "bibcode": "2025A&A...695L..10E",
+      "title": "Constraints on the X-ray-to-radio fluence ratio of FRB 20240114A",
+      "authors": ["Eppel, F.", "Krumpe, M.", "Limaye, P.", "Intrarat, N.", "Wongphechauxsorn, J.", "Cruces, M.", "Herrmann, W.", "Jankowski, F.", "Jaroenjittichai, P.", "Spitler, L. G.", "Kadler, M."],
+      "journal": "Astronomy & Astrophysics, Volume 695, id.L10",
+      "year": 2025,
+      "date": "March 2025",
+      "doi": "10.1051/0004-6361/202453563",
+      "arxiv": "2503.02580",
+      "keywords": ["radiation mechanisms: non-thermal", "methods: data analysis", "methods: observational", "stars: magnetars", "X-rays: bursts"],
+      "citations": 13,
+      "refereed": true
+    },
+    {
+      "bibcode": "2025A&A...693A..40B",
+      "title": "FRB 20121102A monitoring: Updated periodicity in the L band",
+      "authors": ["Braga, C. A.", "Cruces, M.", "Cassanelli, T.", "Espinoza-Dupouy, M. C.", "Rodriguez, L.", "Spitler, L. G.", "Vera-Casanova, J.", "Limaye, P."],
+      "journal": "Astronomy & Astrophysics, Volume 693, id.A40",
+      "year": 2025,
+      "date": "January 2025",
+      "doi": "10.1051/0004-6361/202451905",
+      "arxiv": "2408.12567",
+      "keywords": ["methods: data analysis", "methods: observational", "radio continuum: general"],
+      "citations": 21,
+      "refereed": true
+    },
+    {
+      "bibcode": "2024EPJST.tmp..399B",
+      "title": "Resource-aware research on Universe and Matter: call-to-action in digital transformation",
+      "authors": ["Bruers, Ben", "Cruces, Marilyn", "Demleitner, Markus", "Duckeck, Guenter", "Düren, Michael", "Eich, Niclas", "Enßlin, Torsten", "Erdmann, Johannes", "Erdmann, Martin", "Fackeldey, Peter", "Felder, Christian", "Fischer, Benjamin", "Fröse, Stefan", "Funk, Stefan", "Gasthuber, Martin", "Grimshaw, Andrew", "Hadasch, Daniela", "Hannemann, Moritz", "Kappes, Alexander", "Kleinemühl, Raphael", "Kozlov, Oleksiy M.", "Kuhr, Thomas", "Lupberger, Michael", "Neuhaus, Simon", "Niknejadi, Pardis", "Reindl, Judith", "Schindler, Daniel", "Schneidewind, Astrid", "Schreiber, Frank", "Schumacher, Markus", "Schwarz, Kilian", "Streit, Achim", "von Cube, R. Florian", "Walker, Rodney", "Walther, Cyrus", "Wozniewski, Sebastian", "Zhou, Kai"],
+      "journal": "The European Physical Journal Special Topics",
+      "year": 2024,
+      "date": "December 2024",
+      "doi": "10.1140/epjs/s11734-024-01436-4",
+      "arxiv": "2311.01169",
+      "keywords": [],
+      "citations": 11,
+      "refereed": true
+    },
+    {
+      "bibcode": "2024ApJ...974..170C",
+      "title": "Contemporaneous X-Ray Observations of 30 Bright Radio Bursts from the Prolific Fast Radio Burst Source FRB 20220912A",
+      "authors": ["Cook, Amanda M.", "Scholz, Paul", "Pearlman, Aaron B.", "Abbott, Thomas C.", "Cruces, Marilyn", "Gaensler, B. M.", "Dong, Fengqiu Adam", "Michilli, Daniele", "Eadie, Gwendolyn", "Kaspi, Victoria M.", "Stairs, Ingrid", "Tan, Chia Min", "Bhardwaj, Mohit", "Cassanelli, Tomas", "Curtin, Alice P.", "Ibik, Adaeze L.", "Lazda, Mattias", "Masui, Kiyoshi W.", "Pandhi, Ayush", "Rafiei-Ravandi, Masoud", "Sammons, Mawson W.", "Shin, Kaitlyn", "Smith, Kendrick", "Stenning, David C."],
+      "journal": "The Astrophysical Journal, Volume 974, id.170",
+      "year": 2024,
+      "date": "October 2024",
+      "doi": "10.3847/1538-4357/ad6a13",
+      "arxiv": "2408.11895",
+      "keywords": [],
+      "citations": 15,
+      "refereed": true
+    },
+    {
+      "bibcode": "2023MNRAS.518.1672M",
+      "title": "Arecibo and FAST timing follow-up of 12 millisecond pulsars discovered in Commensal Radio Astronomy FAST Survey",
+      "authors": ["Miao, C. C.", "Zhu, W. W.", "Li, D.", "Freire, P. C. C.", "Niu, J. R.", "Wang, P.", "Yuan, J. P.", "Xue, M. Y.", "Cameron, A. D.", "Champion, D. J.", "Cruces, M.", "Chen, Y. T.", "Chi, M. M.", "Cheng, X. F.", "Dang, S. J.", "Ding, M. F.", "Feng, Y.", "Gan, Z. Y.", "Hobbs, G.", "Kramer, M.", "Liu, Z. J.", "Li, Y. X.", "Luo, Z. K.", "Miao, X. L.", "Meng, L. Q.", "Niu, C. H.", "Pan, Z. C.", "Qian, L.", "Sun, Z. Y.", "Wang, N.", "Wang, S. Q.", "Wang, J. B.", "Wu, Q. D.", "Wang, Y. B.", "Wang, C. J.", "Wang, H. F.", "Wang, S.", "Xie, X. Y.", "Xie, M.", "Xiao, Y. F.", "Yuan, M.", "Yue, Y. L.", "Yao, J. M.", "Yan, W. M.", "You, S. P.", "Yu, X. H.", "Zhao, D.", "Zhao, R. S.", "Zhang, L."],
+      "journal": "Monthly Notices of the Royal Astronomical Society, Volume 518, pp.1672-1682",
+      "year": 2023,
+      "date": "January 2023",
+      "doi": "10.1093/mnras/stac1305",
+      "arxiv": "2205.04232",
+      "keywords": [],
+      "citations": 27,
+      "refereed": true
+    }
+  ]
+}
