@@ -12,7 +12,6 @@ export interface Member {
   education?: string;
   area?: string;
   img: string;
-  email?: string;
   bio: string;
   skills?: string[];
   hobbies?: string;

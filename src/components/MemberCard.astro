@@ -9,7 +9,7 @@ interface Props {
 }
 
 const { member, featured = false } = Astro.props;
-const { name, slug, position, education, area, img, email, bio, skills, hobbies, profiles, pending } = member;
+const { name, slug, position, education, area, img, bio, skills, hobbies, profiles, pending } = member;
 const SHORT = featured ? 600 : 220;
 const isLong = bio.length > SHORT;
 const shortBio = isLong ? bio.slice(0, bio.lastIndexOf(" ", SHORT)) + "…" : bio;
@@ -99,16 +99,6 @@ const shortBio = isLong ? bio.slice(0, bio.lastIndexOf(" ", SHORT)) + "…" : bi
     }
 
     <div class="mt-auto pt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-      {
-        email && (
-          <a href={`mailto:${email}`} class="inline-flex items-center text-gray-600 hover:text-brand-600" title={email}>
-            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            Email
-          </a>
-        )
-      }
       {
         profiles.orcid && (
           <a href={profiles.orcid} target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-[#5a8a1c] hover:text-[#3f6313]" title="ORCID profile">

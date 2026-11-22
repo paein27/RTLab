@@ -8,7 +8,7 @@ const lead = team.find((m) => m.group === "lead");
 
 const topics = [
   { title: "Research collaborations", text: "Joint projects, observing proposals and instrumentation partnerships.", subject: "Research collaboration" },
-  { title: "Student opportunities", text: "Internships, theses and graduate positions.", subject: "Student opportunities", to: lead?.email },
+  { title: "Student opportunities", text: "Internships, theses and graduate positions.", subject: "Student opportunities" },
   { title: "Outreach & media", text: "Talks, school visits, events and press enquiries.", subject: "Outreach / media" },
 ];
 ---
@@ -34,11 +34,6 @@ const topics = [
             <h2 class="text-lg font-bold">Group leader</h2>
             <p class="mt-1 text-gray-800">{lead.name}</p>
             <p class="text-sm text-gray-500">{lead.position}</p>
-            {lead.email && (
-              <a href={`mailto:${lead.email}`} class="mt-2 inline-block font-semibold text-brand-600 hover:underline">
-                {lead.email}
-              </a>
-            )}
           </div>
         )
       }
@@ -68,7 +63,7 @@ const topics = [
     <div class="grid gap-6 md:grid-cols-3">
       {
         topics.map((t) => (
-          <a href={`mailto:${t.to ?? site.contactEmail}?subject=${encodeURIComponent(t.subject)}`} class="card p-6 group">
+          <a href={`mailto:${site.contactEmail}?subject=${encodeURIComponent(t.subject)}`} class="card p-6 group">
             <h3 class="text-lg font-bold group-hover:text-brand-600">{t.title}</h3>
             <p class="mt-2 text-sm text-gray-600">{t.text}</p>
             <span class="mt-4 inline-block text-sm font-semibold text-brand-600">Send an email →</span>

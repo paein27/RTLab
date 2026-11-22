@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # originales de fotos y documentos entregados por el grupo (pesados)
 Fotos estudiantes-*/
+
+# configuración local del editor/asistente
+.claude/
