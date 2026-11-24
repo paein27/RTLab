@@ -2,7 +2,7 @@
 // Tipos y utilidades para los miembros del grupo (src/data/team.json).
 import teamData from "../data/team.json";
 
-export type GroupKey = "lead" | "staff" | "students" | "interns" | "team";
+export type GroupKey = "lead" | "postdocs" | "engineers" | "admin" | "students" | "interns";
 
 export interface Member {
   name: string;
@@ -27,10 +27,11 @@ export const team = teamData as Member[];
 /** Orden y títulos de las secciones de la página de miembros. */
 export const groups: { key: GroupKey; title: string; description?: string }[] = [
   { key: "lead", title: "Group Leader" },
-  { key: "staff", title: "Engineers & Research Staff" },
+  { key: "postdocs", title: "Postdoctoral Researchers" },
+  { key: "engineers", title: "Engineers" },
+  { key: "admin", title: "Administration" },
   { key: "students", title: "Graduate Students" },
   { key: "interns", title: "Undergraduate Interns" },
-  { key: "team", title: "Research Team" },
 ];
 
 export function initials(name: string): string {

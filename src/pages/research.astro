@@ -67,20 +67,27 @@ const science = [
         <p class="eyebrow !text-brand-300">Flagship instrument</p>
         <h2 class="mt-2 text-3xl font-bold !text-white">FRONTIERS</h2>
         <p class="mt-4 text-brand-100 leading-relaxed">
-          FRONTIERS is our low-cost, large-N small-D radio telescope: a compact array of 23
-          six-meter antennas built to detect Fast Radio Bursts in the 1–2 GHz band. We design it
-          end to end in Chile — from the composite reflectors and mounts to the RF chain and the
-          RFSoC digital backends — to bring radio astronomy instrumentation closer to local
-          capabilities in Chile and Latin America.
+          FRONTIERS is the project that invites us to rethink how we build and operate radio
+          telescopes. We are designing an array in Chile to continuously monitor radio transients,
+          with sustainability incorporated from the beginning: reducing cost, complexity, and
+          energy consumption without sacrificing the sensitivity required for the science.
         </p>
         <p class="mt-4 text-brand-100 leading-relaxed">
-          We are also extending FRONTIERS into a dual-use instrument that can operate as a
-          satellite ground station, with X-band feeds that share the dish with the L-band
-          astronomy feed.
+          To achieve this, we are developing a modular Large-N, Small-D phased array of 25 6m
+          dishes operating at centimetric-waves. Its room-temperature receivers, reconfigurable
+          digital backend, and real-time processing pipeline are being designed with energy
+          efficiency in mind, allowing the telescope to operate on photovoltaic power. The modular
+          design also allows us to expand the array as resources become available.
+        </p>
+        <p class="mt-4 text-brand-100 leading-relaxed">
+          FRONTIERS is a collaboration between UC Chile, the Max Planck Institute for Radio
+          Astronomy, and ANID CPS-RTC Technological Center. We are currently validating the core
+          technologies that will make this approach possible, laying the groundwork for the future
+          expansion of the array.
         </p>
       </div>
       <dl class="lg:col-span-2 grid grid-cols-2 gap-4 self-center">
-        <div class="rounded-xl bg-white/10 p-4"><dt class="text-xs uppercase tracking-wider text-brand-300">Antennas</dt><dd class="font-display text-3xl font-bold">23</dd></div>
+        <div class="rounded-xl bg-white/10 p-4"><dt class="text-xs uppercase tracking-wider text-brand-300">Antennas</dt><dd class="font-display text-3xl font-bold">25</dd></div>
         <div class="rounded-xl bg-white/10 p-4"><dt class="text-xs uppercase tracking-wider text-brand-300">Dish size</dt><dd class="font-display text-3xl font-bold">6 m</dd></div>
         <div class="rounded-xl bg-white/10 p-4"><dt class="text-xs uppercase tracking-wider text-brand-300">Band</dt><dd class="font-display text-3xl font-bold">1–2 GHz</dd></div>
         <div class="rounded-xl bg-white/10 p-4"><dt class="text-xs uppercase tracking-wider text-brand-300">Sampling</dt><dd class="font-display text-3xl font-bold">5 GS/s</dd></div>
@@ -123,7 +130,7 @@ const science = [
   <!-- Partners -->
   <section class="mb-6 rounded-2xl bg-white border border-brand-100 p-8">
     <h2 class="text-2xl font-bold mb-6">Partners & facilities</h2>
-    <div class="grid gap-6 md:grid-cols-3">
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
       <div>
         <h3 class="font-bold">{site.institution.name}</h3>
         <p class="mt-1 text-sm text-gray-600">Home of the lab, at {site.institution.university}.</p>
@@ -131,6 +138,10 @@ const science = [
       <div>
         <h3 class="font-bold">Max Planck Institute for Radio Astronomy</h3>
         <p class="mt-1 text-sm text-gray-600">RTL is a Max Planck Partner Group with the MPIfR (Bonn, Germany).</p>
+      </div>
+      <div>
+        <h3 class="font-bold">ANID CPS-RTC Technological Center</h3>
+        <p class="mt-1 text-sm text-gray-600">Partner in the development of FRONTIERS.</p>
       </div>
       <div>
         <h3 class="font-bold">ALMA</h3>
